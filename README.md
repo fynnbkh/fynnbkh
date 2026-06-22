@@ -61,39 +61,13 @@ I'm finishing an MSc in Analytics & AI at ESMT Berlin. Before the master's I spe
 
 ## 📂 Selected work
 
-**Master's thesis: minimum-wage reform and short-term rentals**
-Does a sharp minimum-wage increase move prices and occupancy in the Airbnb market? 
-I'm testing this on Montenegro's "Europe Now" reform, using a matched difference-in-differences 
-design with Albania as the control. The dataset is roughly 33,000 listings from AirDNA. 
-The estimation runs in Python with `pyfixest`: coarsened exact matching on host and 
-listing characteristics, listing and year fixed effects, standard errors clustered by listing, 
-and the price outcomes split apart so the labour-cost channel can be tested on its own rather 
-than assumed. Code and writeup will go public after submission. The AirDNA data is licensed, 
-so it stays out of the repo.
+**Master's thesis: minimum-wage reform and short-term rentals**   Does a sharp minimum-wage increase move prices and occupancy in the Airbnb market?   I'm testing this on Montenegro's "Europe Now" reform, using a matched difference-in-differences design with Albania as the control. The dataset is roughly 33,000 listings from AirDNA.   The estimation runs in Python with `pyfixest`: coarsened exact matching on host and listing characteristics, listing and year fixed effects, standard errors clustered by listing, and the price outcomes split apart so the labour-cost channel can be tested on its own rather than assumed. Code and writeup will go public after submission. The AirDNA data is licensed, so it stays out of the repo.
 `Python` `pyfixest` `pandas` `causal inference`
 
-**Analytics consulting project: predicting sales outcomes in a CRM**
-A three-month ESMT team project on real CRM data from a German company. The brief was 
-to forecast how individual sales opportunities resolve: whether each deal is won or lost, 
-when it closes, and what the predictions add up to once aggregated across business units, 
-regions, and product groups. I led the close-timing piece, a survival model that estimates 
-when a deal lands rather than only whether it does. The finding that stuck with me was less 
-about model accuracy than about the data underneath it: a large share of the win-probability 
-fields in the CRM had never been moved off their default value, so much of the existing 
-pipeline forecast rested on numbers nobody had actually set. The models are now in discussion 
-for a trial deployment, and the work became the basis for rethinking how sales reps are 
-incentivised.
+**Analytics consulting project: predicting sales outcomes in a CRM**   A three-month ESMT team project on real CRM data from a German company. The brief was to forecast how individual sales opportunities resolve: whether each deal is won or lost, when it closes, and what the predictions add up to once aggregated across business units, regions, and product groups. I led the close-timing piece, a survival model that estimates when a deal lands rather than only whether it does. The finding that stuck with me was less about model accuracy than about the data underneath it: a large share of the win-probability fields in the CRM had never been moved off their default value, so much of the existing pipeline forecast rested on numbers nobody had actually set. The models are now in discussion for a trial deployment, and the work became the basis for rethinking how sales reps are incentivised.
 `Python` `XGBoost` `survival analysis` `scikit-learn`
 
-**End-to-end ML deployment on Google Cloud**
-A group project where we picked the problem and data ourselves, then took a model 
-the whole way to a running cloud service rather than stopping at a notebook. We split 
-the pipeline into containerised steps (feature engineering, training, inference), 
-pushed the images to Artifact Registry, ran them as Cloud Run Jobs, and chained them 
-into a Cloud Workflows DAG. The model is served behind a FastAPI endpoint, with logging 
-and basic monitoring on top. The part I find most useful in hindsight is how much of the 
-work is everything around the model: deployment strategy, versioning, and knowing when 
-something has quietly broken in production.
+**End-to-end ML deployment on Google Cloud**   A group project where we picked the problem and data ourselves, then took a model the whole way to a running cloud service rather than stopping at a notebook. We split the pipeline into containerised steps (feature engineering, training, inference), pushed the images to Artifact Registry, ran them as Cloud Run Jobs, and chained them into a Cloud Workflows DAG. The model is served behind a FastAPI endpoint, with logging and basic monitoring on top. The part I find most useful in hindsight is how much of the work is everything around the model: deployment strategy, versioning, and knowing when something has quietly broken in production.
 `Python` `Docker` `GCP` `Vertex AI` `Cloud Run` `FastAPI`
 
 ---
